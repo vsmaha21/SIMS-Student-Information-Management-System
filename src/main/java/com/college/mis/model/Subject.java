@@ -1,12 +1,6 @@
 package com.college.mis.model;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
-import jakarta.persistence.Embeddable;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 //@Component
@@ -14,15 +8,13 @@ import jakarta.persistence.Id;
 @Entity
 public class Subject {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String subjectId;
-	
+
 	private String subjectName;
-	
+
 	private Integer fees;
 
-	
-	
 	public Subject(String subjectId, String subjectName, Integer fees) {
 		super();
 		this.subjectId = subjectId;
@@ -57,11 +49,5 @@ public class Subject {
 	public Subject() {
 		super();
 	}
-	
-	
 
-	
-	
-	
-	
 }
